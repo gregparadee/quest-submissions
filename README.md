@@ -16,6 +16,18 @@ A: Smart contracts are just programs designed to interact with a Blockchain. The
 
 A: A script, reads data from a Blockchain and does not have any cost associated to it. A transaction, interacts with a Blockchain and changes data. Transactions typically have a cost associated with them. 
 
+### Day 2
+
+1. What are the 5 Cadence Programming Language Pillars?
+
+A: Safety and Security, Clarity, Approachability, Developer Experience, Resource Oriented Programming
+
+2. In your opinion, even without knowing anything about the Blockchain or coding, why could the 5 Pillars be useful?
+
+A: Safety and Security - Protects, assuming no bad intent, the end-user and developer while encouraging mass adoption. Safety and Security are always at the top of peoples minds, especially when dealing with money or goods. Clarity - Allows someone with a little but of programming knowledge to understand what they are doing and also makes it easy for new developers to learn the language, increasing adoption. Approachability - Makes it easy to learn for the first time or switch over too if already a developer. Code should be easy, not hard. Developer Experience - Making things easy to understand and develop keeps Developers happy and motivated. Poor error handling can be a turn-off to many developers. 
+
+
+
 # Chapter 2
 
 # Chapter 3
