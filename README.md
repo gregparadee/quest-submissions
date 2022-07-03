@@ -27,8 +27,38 @@ A: Safety and Security, Clarity, Approachability, Developer Experience, Resource
 A: Safety and Security - Protects, assuming no bad intent, the end-user and developer while encouraging mass adoption. Safety and Security are always at the top of peoples minds, especially when dealing with money or goods. Clarity - Allows someone with a little but of programming knowledge to understand what they are doing and also makes it easy for new developers to learn the language, increasing adoption. Approachability - Makes it easy to learn for the first time or switch over too if already a developer. Code should be easy, not hard. Developer Experience - Making things easy to understand and develop keeps Developers happy and motivated. Poor error handling can be a turn-off to many developers. 
 
 
+## Chapter 2
 
-# Chapter 2
+### Day 1
+
+1. Deploy a contract to account 0x03 called "JacobTucker". Inside that contract, declare a constant variable named is, and make it have type String. Initialize it to "the best" when your contract gets deployed.
+A:
+
+```cadence
+pub contract JacobTucker {
+
+    pub let is: String
+
+    init() {
+        self.is = "the best"
+    }
+}
+```
+2. Check that your variable is actually equals "the best" by executing a script to read that variable. Include a screenshot of the output.
+A:
+
+```cadence
+import JacobTucker from 0x03
+
+pub fun main(): String {
+    return JacobTucker.is
+}
+```
+![Screen Shot 2022-07-02 at 8 49 14 PM](https://user-images.githubusercontent.com/223535/177020316-52f3f543-f667-413e-b855-9de36d0c31fe.png)
+
+### Day 2
+
+
 
 # Chapter 3
 
