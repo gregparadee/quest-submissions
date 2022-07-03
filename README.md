@@ -1,4 +1,4 @@
-# quest-submissions
+# Quest Submmissions
 
 ## Chapter 1
 
@@ -58,7 +58,73 @@ pub fun main(): String {
 
 ### Day 2
 
+1. Explain why we wouldn't call changeGreeting in a script.
 
+A: Scripts are used to view information on the Blockchain. changeGreeting is a function that update information and therefore requires a transaction.
+
+2. What does the AuthAccount mean in the prepare phase of the transaction?
+
+A: AuthAccount signifies the person who is executing and paying for the transaction. It also allows transaction to access information in your account. 
+
+3. What is the difference between the prepare phase and the execute phase in the transaction?
+
+A: The prepare phase is primarily to access information in your account and "prepare" the transaction. The execute phase can't do this. The execute phase actually performs the instructions (e.g, execute a function).
+
+4. This is the hardest quest so far, so if it takes you some time, do not worry! I can help you in the Discord if you have questions.
+
+A: 
+
+**Contract**
+```cadence
+pub contract HelloWorld {
+
+    pub var greeting: String
+
+    pub var myNumber: Int
+
+
+    pub fun changeGreeting(newGreeting: String) {
+    self.greeting = newGreeting
+    }
+
+    pub fun updateMyNumber(newNumber: Int) {
+    self.myNumber = newNumber
+    }
+
+    init() {
+        self.greeting = "Hello, World!"
+        self.myNumber = 0
+    }
+}
+```
+
+**Script**
+```cadence
+import HelloWorld from 0x01
+
+pub fun main(): Int {
+    return HelloWorld.myNumber
+}
+```
+
+**Transaction**
+```cadence
+import HelloWorld from 0x01
+
+transaction (myNewNumber: Int) {
+
+  prepare(signer: AuthAccount) {}
+
+  execute {
+    HelloWorld.updateMyNumber(newNumber: myNewNumber)
+  
+  }
+
+ }
+ ```
+ ![Screen Shot 2022-07-02 at 9 56 45 PM](https://user-images.githubusercontent.com/223535/177021480-0fd246dd-a643-4c18-929e-77477e4514a9.png)
+
+ 
 
 # Chapter 3
 
